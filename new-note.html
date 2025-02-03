@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Запись в дневник</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <h1 style="display: flex; justify-content: space-between; align-items: center;">
+    <a href="index.html" style="text-decoration: none; color: inherit;">&#8592; Запись в дневник</a>
+    <a href="help.html" id="help-icon" title="Справка" style="color: white; font-size: 24px; text-decoration: none;">
+      &#x3f; <!-- Вопросительный знак через HTML-сущность -->
+    </a>
+  </h1>
+</header>
+
+
+  <form id="new-note-form">
+    <!-- Время и дата -->
+    <div class="form-group">
+     <!-- <label for="date-time">Время и дата</label>-->
+      <input type="datetime-local" id="date-time" name="date-time">
+    </div>
+
+    <!-- Ситуация -->
+    <div class="form-group">
+      <textarea id="situation" name="situation" placeholder=" "></textarea>
+      <label for="situation" class="label">Ситуация, при которой возникла мысль</label>
+    </div>
+
+    <!-- Эмоции -->
+    <div class="form-group">
+      <textarea id="emotions" name="emotions" placeholder=" "></textarea>
+      <label for="emotions" class="label">Ваши эмоции (что Вы чувствуете?)</label>
+    </div>
+
+    <!-- Автоматическая мысль -->
+    <div class="form-group">
+      <textarea id="automatic-thought" name="automatic-thought" placeholder=" "></textarea>
+      <label for="automatic-thought" class="label">Ваша автоматическая мысль</label>
+    </div>
+
+    <!-- Уровень дискомфорта -->
+    <div class="form-group">
+      <label for="discomfort">Отметьте уровень дискомфорта</label>
+	<br>
+      <input type="range" id="discomfort" name="discomfort" min="0" max="100" value="0">
+      <span id="discomfort-value">0%</span>
+    </div>
+
+    <!-- Телесные ощущения -->
+    <div class="form-group">
+      <textarea id="physical-sensations" name="physical-sensations" placeholder=" "></textarea>
+      <label for="physical-sensations" class="label">Телесные ощущения</label>
+    </div>
+
+    <!-- Предпринятые действия -->
+    <div class="form-group">
+      <textarea id="actions" name="actions" placeholder=" "></textarea>
+      <label for="actions" class="label">Предпринятые действия</label>
+    </div>
+
+    <!-- Рациональный ответ -->
+    <div class="form-group">
+      <textarea id="rational-response" name="rational-response" placeholder=" "></textarea>
+      <label for="rational-response" class="label">Ваш рациональный ответ</label>
+    </div>
+
+    <!-- Искажения -->
+    <div class="form-group">
+      <label for="distortions">Отметьте искажения:</label>
+      <div>
+        <input type="checkbox" id="all-or-nothing" name="distortions" value="all-or-nothing">
+        <label for="all-or-nothing">Всё или ничего</label>
+      </div>
+      <div>
+        <input type="checkbox" id="overgeneralization" name="distortions" value="overgeneralization">
+        <label for="overgeneralization">Сверхобобщение</label>
+      </div>
+      <div>
+        <input type="checkbox" id="negative-filter" name="distortions" value="negative-filter">
+        <label for="negative-filter">Негативный фильтр</label>
+      </div>
+      <div>
+        <input type="checkbox" id="discount-positive" name="distortions" value="discount-positive">
+        <label for="discount-positive">Обесценивание положительного</label>
+      </div>
+      <div>
+        <input type="checkbox" id="jumping-to-conclusions" name="distortions" value="jumping-to-conclusions">
+        <label for="jumping-to-conclusions">Поспешные выводы</label>
+      </div>
+      <div>
+        <input type="checkbox" id="magnification" name="distortions" value="magnification">
+        <label for="magnification">Преувеличение и преуменьшение</label>
+      </div>
+      <div>
+        <input type="checkbox" id="emotional-reasoning" name="distortions" value="emotional-reasoning">
+        <label for="emotional-reasoning">Эмоциональное обоснование</label>
+      </div>
+      <div>
+        <input type="checkbox" id="shoulds" name="distortions" value="shoulds">
+        <label for="shoulds">Долженствования</label>
+      </div>
+      <div>
+        <input type="checkbox" id="labeling" name="distortions" value="labeling">
+        <label for="labeling">Ярлыки</label>
+      </div>
+      <div>
+        <input type="checkbox" id="personalization" name="distortions" value="personalization">
+        <label for="personalization">Персонализация</label>
+      </div>
+    </div>
+
+    <!-- Кнопка для сохранения записи -->
+ 
+<footer style="background-color: #2b5a7b; color: white; text-align: center; padding: 0; cursor: pointer; border: none;">
+  <button type="submit" style="background: none; border: none; color: white; width: 100%; height: 100%; padding: 10px; font-size: 16px; cursor: pointer;">
+    Сохранить 
+  </button>
+</footer>
+
+
+
+  
+
+  </form>
+
+  <script src="js/new-note.js"></script>
+</body>
+</html>

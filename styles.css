@@ -1,0 +1,202 @@
+
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+  background-color: #fff;
+  padding-top: 30px;  /* Отступ сверху для хедера */
+  padding-bottom: 60px;  /* Отступ снизу для футера */
+  margin-top: 60px;
+}
+
+/* Хедер */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2b5a7b;
+  color: white;
+  padding: 0px 20px;
+  text-align: left;
+  box-sizing: border-box;
+  z-index: 1000;
+  top: 0;
+  font-size: 14px;
+}
+
+/* Футер */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2b5a7b;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  z-index: 1000;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+
+
+#app {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Стили для записей */
+.note {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.note p {
+  margin: 5px 0;
+  font-size: 1rem;
+  font-weight: normal;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Время и дата */
+.note .date-time {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* Ситуация, мысль, дискомфорт, ощущения, действия - все серое, не жирное */
+.note .situation,
+.note .automatic-thought,
+.note .discomfort,
+.note .physical-sensations,
+.note .actions {
+  color: #777;
+  font-weight: normal;
+}
+
+/* Ситуация, мысль, дискомфорт, ощущения, действия - все серое, не жирное */
+.note .situation strong,
+.note .automatic-thought strong,
+.note .discomfort strong,
+.note .physical-sensations strong,
+.note .actions strong {
+  color: #777;
+  font-weight: normal;
+}
+
+/* Эмоции - синие, и заголовок, и значение */
+.note .emotions {
+  color: #1E88E5;
+  font-weight: normal;
+}
+
+/* Искажения - темно-синие */
+.note .distortions {
+  color: #003366;
+  font-weight: normal;
+}
+
+.note .response,
+.note .response strong {
+  color: #000 !important; 
+  font-weight: bold !important; 
+}
+
+/* Убираем жирность для всех остальных элементов */
+.note strong {
+  font-weight: normal;
+}
+
+
+/* Стили для полей ввода с сдвигающимися заголовками */
+.form-group {
+  position: relative;
+  margin-bottom: 14px;
+}
+
+/* Стили для текста "Отметьте искажения" */
+.form-group label[for="distortions"] {
+  font-size: 14px; /* Сделаем текст маленьким */
+  color: #999; /* Цвет как у лейблов в неактивном состоянии */
+}
+
+/* Стили для лейбла "Уровень дискомфорта" */
+.form-group label[for="discomfort"] {
+  font-size: 14px; /* Размер шрифта маленький */
+  color: #999; /* Цвет как у лейблов в неактивном состоянии */
+}
+
+
+/* Стили для текста чекбоксов без изменений */
+.form-group input[type="checkbox"] + label {
+  font-size: 16px; /* Оставляем прежний размер шрифта для текста рядом с чекбоксами */
+  color: #333; /* Цвет текста чекбоксов */
+}
+
+
+textarea {
+  width: 100%;
+  padding: 10px 10px 10px 10px; 
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  border-width: 2px;
+  resize: none;
+  outline: none;
+  transition: 0.3s ease;
+  box-sizing: border-box;
+  position: relative;  /* чтобы лейбл пересекал границу */
+}
+
+/* Стили для заголовков */
+.label {
+  position: absolute;
+  left: 10px;
+  top: 8px; /* поднимаем лейбл выше, чтобы он пересекал границу */
+  font-size: 16px;
+  color: #999;
+  pointer-events: none;
+  transition: 0.3s ease;
+  background-color: #fff; /* белый фон, чтобы лейбл перекрывал границу */
+  padding: 0 5px;
+}
+
+/* Когда поле в фокусе или содержит текст */
+textarea:focus + .label,
+textarea:not(:placeholder-shown) + .label {
+  top: -10px;  /* сдвигаем лейбл выше за границу поля */
+  font-size: 12px;
+  color: #333;
+}
+
+/* Когда поле в фокусе */
+textarea:focus {
+  border-color: #2b5a7b;  /* Цвет границы при фокусе */
+  
+}
+
+/* Когда поле в фокусе или содержит текст, меняем цвет лейбла */
+textarea:focus + .label,
+textarea:not(:placeholder-shown) + .label {
+  color: #2b5a7b;  /* Цвет лейбла при фокусе */
+}
+
