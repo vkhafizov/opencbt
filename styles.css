@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
   padding-left: 20px;
+  padding-right: 20px;
   background-color: #fff;
   padding-top: 30px;  /* Отступ сверху для хедера */
   padding-bottom: 60px;  /* Отступ снизу для футера */
