@@ -9,8 +9,8 @@ const ASSETS_TO_CACHE = [
   './js/main-page.js',
   './js/new-note.js',
   './js/help.js',
-  './icons/icon-192×192.png',
-  './icons/icon-512×512.png'
+  './icons/icon-192.png',
+  './icons/icon-512.png'
 ];
 
 self.addEventListener('install', (event) => {
